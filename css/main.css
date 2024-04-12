@@ -1,0 +1,276 @@
+@charset "utf-8";
+/* Animated Flip Down Clock Style */
+
+body{
+	background: #ddd;
+	font-family:arial;
+	font-size:62.5%;
+}
+
+a:link{
+	color:#171717;
+	text-decoration:none;
+}
+
+a:visited{
+	color:#171717;
+}
+
+/*#title{
+	text-align:center;
+	margin:auto;
+	padding:20px 0 0 0;
+	font-size:2em;
+	color:#171717;
+	text-shadow: 1px 1px #ccc;
+}*/
+
+#header{
+	position:relative;
+	top:110px;
+	margin-top: 20px;
+ 	text-align:center;
+	font-size:6em;
+	color:#171717;
+	text-shadow: 1px 1px #ccc;
+}
+
+#social{
+	width:500px;
+	padding-top:460px;
+	margin:auto;
+}
+
+div .plusone, .twitter, .fb-like, .pinterest {
+    font-size: 1px;
+    margin-left:3px;
+    display: inline-block;
+}
+
+div .flattr {
+	float:right;
+	margin-right:55px;
+    font-size: 1px;
+}
+
+div .fb_reset {
+    display: inline;
+}
+
+#hockeyCtA{
+	position:absolute;
+	top:400px;
+	left:50%;
+	margin-left:-233px;
+}
+
+#hiddenTip{
+	position: absolute;
+	top:490px;
+	left:50%;
+	margin-left:-390px;
+	width:95px;
+	font-size:0.9em;
+	text-align:center;
+}
+
+a.tip.hover,a.tip:hover {color:#f2f2f2; cursor:default}
+
+#todayIs{
+	position:absolute;
+	left:50%;
+	top:63px;
+	margin-left:-147px;
+	font-size:2em;
+	color:#171717;
+	text-shadow: 1px 1px #ccc;
+}
+
+#month{
+	position:absolute;
+	left:50%;
+	top:63px;
+	margin-left:40px;
+	font-size:2em;
+	color:#171717;
+	text-shadow: 1px 1px #ccc;
+}
+
+#date{
+	position:absolute;
+	left:50%;
+	top:40px;
+	margin-left:-30px;
+}
+
+#dateFront{
+	position:absolute;
+	top:0px;
+}
+
+
+#dateUpperHalf, #dateUpperHalfBack{
+	vertical-align:bottom;
+}
+
+#dateLowerHalf, #dateLowerHalfBack{
+	vertical-align:top;
+}
+
+
+
+
+#dateUpperHalf img{
+	position:relative;
+	height:30px;
+	vertical-align:bottom;
+	visibility:visible;
+}
+
+#dateLowerHalf img{
+	position:relative;
+	height:30px;
+	vertical-align:top;
+	visibility:visible;
+}
+
+	
+#dateLowerHalfBack img{
+	position:relative;
+	vertical-align:top;
+}
+
+#dateUpperHalfBack img{
+	position:relative;
+	vertical-align:bottom;
+}
+
+
+#wrapper{
+	position:absolute;
+	top:220px;
+	left:50%;
+	margin-left:-240px;
+	text-align:center;
+}
+
+#front{
+	position:absolute;
+	top:0px;
+}
+
+
+#upperHalf, #upperHalfBack{
+	vertical-align:bottom;
+}
+
+#lowerHalf, #lowerHalfBack{
+	vertical-align:top;
+}
+
+
+
+
+#upperHalf img{
+	position:relative;
+	height:80px;
+	vertical-align:bottom;
+	visibility:visible;
+}
+
+#lowerHalf img{
+	position:relative;
+	height:80px;
+	vertical-align:top;
+	visibility:visible;
+}
+
+	
+#lowerHalfBack img{
+	position:relative;
+	vertical-align:top;
+}
+
+#upperHalfBack img{
+	position:relative;
+	vertical-align:bottom;
+}
+
+#hoursUp, #hoursDown, #hoursUpBack, #hoursDownBack, #minutesUp, #minutesDown, #minutesUpBack, #minutesDownBack, #secondsUp, #secondsDown, #secondsUpBack, #secondsDownBack{
+	width:160px;
+}
+
+#dateUp, #dateDown, #dateUpBack, #dateDownBack{
+	width:60px;
+}	
+
+
+#lookup {
+	margin: auto;
+	margin-top: 30px;
+	width: 700px;
+}
+
+#lookupHeading {
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+table {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+td {
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #202020;
+	width: 35px;
+	height: 30px;
+	/*background: rgba(12, 189, 227, 0.1);*/
+	border-radius: 2px;
+	box-shadow: 0px 1px 1px #888888;
+}
+
+td:hover {
+	background-color: #0cbde3;
+	color: white;
+	cursor: pointer;
+}
+
+.active {
+	background-color: #0cbde3;
+	color: white;
+}
+
+.lookupImage {
+	float: left;
+	margin-bottom: 50px;
+}
+
+#photo {
+	border-radius: 15px;
+	box-shadow: 0px 2px 1px #888888;
+}
+
+.lookupText {
+	float: left;
+	margin-left: 30px;
+}
+
+#playerLink {
+	visibility: hidden;
+	color: blue;
+}
+
+#lookupTitle {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#lookupBody {
+	font-size: 14px;
+	width: 350px;
+}

@@ -1,12 +1,10 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" itemscope
-	itemtype="http://schema.org/CreativeWork">
 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" itemscope itemtype="http://schema.org/CreativeWork">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>What Hockey Is It?</title>
-	<link rel="stylesheet" type="text/css" href="hockeyStyle.css" />
+	<link rel="stylesheet" type="text/css" href="./css/main.css" />
 	<meta itemprop="name" content="What Hockey Is It?">
 	<meta itemprop="description" content="Finally! An easy way to tell the current Hockey!">
 	<meta itemprop="image" content="http://whathockeyisit.com/icon.png">
@@ -16,122 +14,87 @@
 	<meta property="og:image" content="http://whathockeyisit.com/icon.png" />
 	<meta property="og:site_name" content="What Hockey Is It" />
 	<meta property="og:description" content="Finally! An easy way to tell the current Hockey!" />
-
-	<script language="JavaScript1.1">
-		var clockParts = new Array("http://whathockeyisit.com/hockeyCtAMulti.png", "http://whathockeyisit.com/faces/upper/0.png", "http://whathockeyisit.com/faces/upper/1.png", "http://whathockeyisit.com/faces/upper/2.png", "http://whathockeyisit.com/faces/upper/3.png", "http://whathockeyisit.com/faces/upper/4.png", "http://whathockeyisit.com/faces/upper/5.png", "http://whathockeyisit.com/faces/upper/6.png", "http://whathockeyisit.com/faces/upper/7.png", "http://whathockeyisit.com/faces/upper/8.png", "http://whathockeyisit.com/faces/upper/9.png", "http://whathockeyisit.com/faces/upper/10.png", "http://whathockeyisit.com/faces/upper/11.png", "http://whathockeyisit.com/faces/upper/12.png", "http://whathockeyisit.com/faces/upper/13.png", "http://whathockeyisit.com/faces/upper/14.png", "http://whathockeyisit.com/faces/upper/15.png", "http://whathockeyisit.com/faces/upper/16.png", "http://whathockeyisit.com/faces/upper/17.png", "http://whathockeyisit.com/faces/upper/18.png", "http://whathockeyisit.com/faces/upper/19.png", "http://whathockeyisit.com/faces/upper/20.png", "http://whathockeyisit.com/faces/upper/21.png", "http://whathockeyisit.com/faces/upper/22.png", "http://whathockeyisit.com/faces/upper/23.png", "http://whathockeyisit.com/faces/upper/24.png", "http://whathockeyisit.com/faces/upper/25.png", "http://whathockeyisit.com/faces/upper/26.png", "http://whathockeyisit.com/faces/upper/27.png", "http://whathockeyisit.com/faces/upper/28.png", "http://whathockeyisit.com/faces/upper/29.png", "http://whathockeyisit.com/faces/upper/30.png", "http://whathockeyisit.com/faces/upper/31.png", "http://whathockeyisit.com/faces/upper/32.png", "http://whathockeyisit.com/faces/upper/33.png", "http://whathockeyisit.com/faces/upper/34.png", "http://whathockeyisit.com/faces/upper/35.png", "http://whathockeyisit.com/faces/upper/36.png", "http://whathockeyisit.com/faces/upper/37.png", "http://whathockeyisit.com/faces/upper/38.png", "http://whathockeyisit.com/faces/upper/39.png", "http://whathockeyisit.com/faces/upper/40.png", "http://whathockeyisit.com/faces/upper/41.png", "http://whathockeyisit.com/faces/upper/42.png", "http://whathockeyisit.com/faces/upper/43.png", "http://whathockeyisit.com/faces/upper/44.png", "http://whathockeyisit.com/faces/upper/45.png", "http://whathockeyisit.com/faces/upper/46.png", "http://whathockeyisit.com/faces/upper/47.png", "http://whathockeyisit.com/faces/upper/48.png", "http://whathockeyisit.com/faces/upper/49.png", "http://whathockeyisit.com/faces/upper/50.png", "http://whathockeyisit.com/faces/upper/51.png", "http://whathockeyisit.com/faces/upper/52.png", "http://whathockeyisit.com/faces/upper/53.png", "http://whathockeyisit.com/faces/upper/54.png", "http://whathockeyisit.com/faces/upper/55.png", "http://whathockeyisit.com/faces/upper/56.png", "http://whathockeyisit.com/faces/upper/57.png", "http://whathockeyisit.com/faces/upper/58.png", "http://whathockeyisit.com/faces/upper/59.png", "http://whathockeyisit.com/faces/upper/991.png", "http://whathockeyisit.com/faces/upper/992.png", "http://whathockeyisit.com/faces/lower/0.png", "http://whathockeyisit.com/faces/lower/1.png", "http://whathockeyisit.com/faces/lower/2.png", "http://whathockeyisit.com/faces/lower/3.png", "http://whathockeyisit.com/faces/lower/4.png", "http://whathockeyisit.com/faces/lower/5.png", "http://whathockeyisit.com/faces/lower/6.png", "http://whathockeyisit.com/faces/lower/7.png", "http://whathockeyisit.com/faces/lower/8.png", "http://whathockeyisit.com/faces/lower/9.png", "http://whathockeyisit.com/faces/lower/10.png", "http://whathockeyisit.com/faces/lower/11.png", "http://whathockeyisit.com/faces/lower/12.png", "http://whathockeyisit.com/faces/lower/13.png", "http://whathockeyisit.com/faces/lower/14.png", "http://whathockeyisit.com/faces/lower/15.png", "http://whathockeyisit.com/faces/lower/16.png", "http://whathockeyisit.com/faces/lower/17.png", "http://whathockeyisit.com/faces/lower/18.png", "http://whathockeyisit.com/faces/lower/19.png", "http://whathockeyisit.com/faces/lower/20.png", "http://whathockeyisit.com/faces/lower/21.png", "http://whathockeyisit.com/faces/lower/22.png", "http://whathockeyisit.com/faces/lower/23.png", "http://whathockeyisit.com/faces/lower/24.png", "http://whathockeyisit.com/faces/lower/25.png", "http://whathockeyisit.com/faces/lower/26.png", "http://whathockeyisit.com/faces/lower/27.png", "http://whathockeyisit.com/faces/lower/28.png", "http://whathockeyisit.com/faces/lower/29.png", "http://whathockeyisit.com/faces/lower/30.png", "http://whathockeyisit.com/faces/lower/31.png", "http://whathockeyisit.com/faces/lower/32.png", "http://whathockeyisit.com/faces/lower/33.png", "http://whathockeyisit.com/faces/lower/34.png", "http://whathockeyisit.com/faces/lower/35.png", "http://whathockeyisit.com/faces/lower/36.png", "http://whathockeyisit.com/faces/lower/37.png", "http://whathockeyisit.com/faces/lower/38.png", "http://whathockeyisit.com/faces/lower/39.png", "http://whathockeyisit.com/faces/lower/40.png", "http://whathockeyisit.com/faces/lower/41.png", "http://whathockeyisit.com/faces/lower/42.png", "http://whathockeyisit.com/faces/lower/43.png", "http://whathockeyisit.com/faces/lower/44.png", "http://whathockeyisit.com/faces/lower/45.png", "http://whathockeyisit.com/faces/lower/46.png", "http://whathockeyisit.com/faces/lower/47.png", "http://whathockeyisit.com/faces/lower/48.png", "http://whathockeyisit.com/faces/lower/49.png", "http://whathockeyisit.com/faces/lower/50.png", "http://whathockeyisit.com/faces/lower/51.png", "http://whathockeyisit.com/faces/lower/52.png", "http://whathockeyisit.com/faces/lower/53.png", "http://whathockeyisit.com/faces/lower/54.png", "http://whathockeyisit.com/faces/lower/55.png", "http://whathockeyisit.com/faces/lower/56.png", "http://whathockeyisit.com/faces/lower/57.png", "http://whathockeyisit.com/faces/lower/58.png", "http://whathockeyisit.com/faces/lower/59.png", "http://whathockeyisit.com/faces/lower/991.png", "http://whathockeyisit.com/faces/lower/992.png")
-		var preImages = new Array(), coverage = clockParts.length, currCount = 0
-
-		function loadImages() {
-			for (i = 0; i < clockParts.length; i++) {
-				preImages[i] = new Image()
-				preImages[i].src = clockParts[i]
-			}
-		}
-
-	</script>
-
-	<script type="text/javascript">
-		/* <![CDATA[ */
-		(function () {
-			var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-			s.type = 'text/javascript';
-			s.async = true;
-			s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-			t.parentNode.insertBefore(s, t);
-		})();
-		/* ]]> */
-	</script>
-
 </head>
 
 <body>
-	<script language="JavaScript1.1">
-		if (document.images) {
-			loadImages()
-		}
+<div id="todayIs">
+	Today is the 
+</div>
+
+<div id="month">
+	<script type="text/javascript">
+		var month_name=new Array(12);
+		month_name[0]="January";
+		month_name[1]="February";
+		month_name[2]="March";
+		month_name[3]="April";
+		month_name[4]="May";
+		month_name[5]="June";
+		month_name[6]="July";
+		month_name[7]="August";
+		month_name[8]="September";
+		month_name[9]="October";
+		month_name[10]="November";
+		month_name[11]="December";
+		var currentTime = new Date();
+		document.write("of "+month_name[currentTime.getMonth()]+".");
 	</script>
-
-	<div id="todayIs">
-		Today is the
-	</div>
-	<div id="month">
-		<script type="text/javascript">
-			var month_name = new Array(12);
-			month_name[0] = "January";
-			month_name[1] = "February";
-			month_name[2] = "March";
-			month_name[3] = "April";
-			month_name[4] = "May";
-			month_name[5] = "June";
-			month_name[6] = "July";
-			month_name[7] = "August";
-			month_name[8] = "September";
-			month_name[9] = "October";
-			month_name[10] = "November";
-			month_name[11] = "December";
-			var currentTime = new Date();
-			document.write("of " + month_name[currentTime.getMonth()] + ".");
-		</script>
-	</div>
-	<div id="date">
-		<div id="dateBack">
-			<div id="dateUpperHalfBack">
-				<img src="spacer2.png" /><img id="dateUpBack" src="faces/upper/0.png" />
-			</div>
-			<div id="dateLowerHalfBack">
-				<img src="spacer2.png" /><img id="dateDownBack" src="faces/lower/0.png" />
-			</div>
+</div>
+<div id="date">
+	<div id="dateBack">
+		<div id="dateUpperHalfBack">
+			<img src="./images/spacer2.png"/><img id="dateUpBack" src="./images/faces/upper/0.png"/>
 		</div>
-
-
-		<div id="dateFront">
-			<div id="dateUpperHalf">
-				<img src="spacer2.png" /><img id="dateUp" src="faces/upper/0.png" />
-			</div>
-			<div id="dateLowerHalf">
-				<img src="spacer2.png" /><img id="dateDown" src="faces/lower/0.png" />
-			</div>
+		<div id="dateLowerHalfBack">
+			<img src="./images/spacer2.png"/><img id="dateDownBack" src="./images/faces/lower/0.png"/>
 		</div>
 	</div>
 
-	<div id="header">
-		Current Hockey is:
-	</div>
-	<div id="wrapper">
 
-		<div id="back">
-			<div id="upperHalfBack">
-				<img src="spacer.png" /><img id="hoursUpBack" src="faces/upper/0.png" />
-				<img id="minutesUpBack" src="faces/upper/0.png" />
-				<img id="secondsUpBack" src="faces/upper/0.png" /><img src="spacer.png" />
-			</div>
-			<div id="lowerHalfBack">
-				<img src="spacer.png" /><img id="hoursDownBack" src="faces/lower/0.png" />
-				<img id="minutesDownBack" src="faces/lower/0.png" />
-				<img id="secondsDownBack" src="faces/lower/0.png" /><img src="spacer.png" />
-			</div>
+	<div id="dateFront">
+		<div id="dateUpperHalf">
+			<img src="./images/spacer2.png"/><img id="dateUp" src="./images/faces/upper/0.png"/>
 		</div>
-
-
-		<div id="front">
-			<div id="upperHalf">
-				<img src="spacer.png" /><img id="hoursUp" src="faces/upper/0.png" />
-				<img id="minutesUp" src="faces/upper/0.png" />
-				<img id="secondsUp" src="faces/upper/0.png" /><img src="spacer.png" />
-			</div>
-			<div id="lowerHalf">
-				<img src="spacer.png" /><img id="hoursDown" src="faces/lower/0.png" />
-				<img id="minutesDown" src="faces/lower/0.png" />
-				<img id="secondsDown" src="faces/lower/0.png" /><img src="spacer.png" />
-			</div>
+		<div id="dateLowerHalf">
+			<img src="./images/spacer2.png"/><img id="dateDown" src="./images/faces/lower/0.png"/>
 		</div>
-
-
 	</div>
+</div>
+
+<div id="header">
+	Current Hockey is:
+</div>
+<div id="wrapper">
+
+	<div id="back">
+		<div id="upperHalfBack">
+			<img src="./images/spacer.png"/><img id="hoursUpBack" src="./images/faces/upper/0.png"/>
+			<img id="minutesUpBack" src="./images/faces/upper/0.png"/>
+			<img id="secondsUpBack" src="./images/faces/upper/0.png"/><img src="./images/spacer.png"/>
+		</div>
+		<div id="lowerHalfBack">
+			<img src="./images/spacer.png"/><img id="hoursDownBack" src="./images/faces/lower/0.png"/>
+			<img id="minutesDownBack" src="./images/faces/lower/0.png"/>
+			<img id="secondsDownBack" src="./images/faces/lower/0.png"/><img src="./images/spacer.png"/>
+		</div>
 	</div>
+
+	<div id="front">
+		<div id="upperHalf">
+			<img src="./images/spacer.png"/><img id="hoursUp" src="./images/faces/upper/0.png"/>
+			<img id="minutesUp" src="./images/faces/upper/0.png"/>
+			<img id="secondsUp" src="./images/faces/upper/0.png"/><img src="./images/spacer.png"/>
+		</div>
+		<div id="lowerHalf">
+			<img src="./images/spacer.png"/><img id="hoursDown" src="./images/faces/lower/0.png"/>
+			<img id="minutesDown" src="./images/faces/lower/0.png"/>
+			<img id="secondsDown" src="./images/faces/lower/0.png"/><img src="./images/spacer.png"/>
+		</div>
+	</div>
+</div>
 
 </body>
-<script src="mootools.js" type="text/javascript"></script>
-<script src="hockeyclock.js" type="text/javascript"></script>
+<script src="./scripts/mootools.js" type="text/javascript"></script>
+<script src="./scripts/hockeyclock.js" type="text/javascript"></script>
 
 </html>
