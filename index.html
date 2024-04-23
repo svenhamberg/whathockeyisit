@@ -1,102 +1,89 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" itemscope
-	itemtype="http://schema.org/CreativeWork">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>What Hockey Is It?</title>
-	<link rel="stylesheet" type="text/css" href="./css/main.css" />
-	<meta itemprop="name" content="What Hockey Is It?">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Hockey Is It?</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta itemprop="name" content="What Hockey Is It?">
 	<meta itemprop="description" content="Finally! An easy way to tell the current Hockey!">
 	<meta itemprop="image" content="http://whathockeyisit.com/icon.png">
 	<meta property="og:title" content="What Hockey Is It?" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://whathockeyisit.com/" />
 	<meta property="og:image" content="http://whathockeyisit.com/icon.png" />
-	<meta property="og:site_name" content="What Hockey Is It" />
 	<meta property="og:description" content="Finally! An easy way to tell the current Hockey!" />
 </head>
 
 <body>
-	<div id="todayIs">
-		Today is the
-	</div>
+    <!-- Facebook SDK -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0"
+        nonce="Ki6I4sgx"></script>
+    
+    <!-- Page content -->
+    <header>
+        Right now,<br>the Hockey is:
+    </header>
+    <div id="clock">
+        <div id="hours">
+            <div class="upper-back">
+                <img class="upper-image" id="hours-upper-back-image" src="images/upper/0.png">
+                <div class="upper-front" id="hours-upper-front">
+                    <img id="hours-upper-front-image" src="images/upper/0.png">
+                </div>
+            </div>
+            <div class="lower-back">
+                <img class="lower-image" id="hours-lower-back-image" src="images/lower/0.png">
+                <div class="lower-front" id="hours-lower-front">
+                    <img id="hours-lower-front-image" src="images/lower/0.png">
+                </div>
+            </div>
+        </div>
+        <div id="minutes">
+            <div class="upper-back">
+                <img class="upper-image" id="minutes-upper-back-image" src="images/upper/0.png">
+                <div class="upper-front" id="minutes-upper-front">
+                    <img id="minutes-upper-front-image" src="images/upper/0.png">
+                </div>
+            </div>
+            <div class="lower-back">
+                <img class="lower-image" id="minutes-lower-back-image" src="images/lower/0.png">
+                <div class="lower-front" id="minutes-lower-front">
+                    <img id="minutes-lower-front-image" src="images/lower/0.png">
+                </div>
+            </div>
+        </div>
+        <div id="seconds">
+            <div class="upper-back">
+                <img class="upper-image" id="seconds-upper-back-image" src="images/upper/0.png">
+                <div class="upper-front" id="seconds-upper-front">
+                    <img id="seconds-upper-front-image" src="images/upper/0.png">
+                </div>
+            </div>
+            <div class="lower-back">
+                <img class="lower-image" id="seconds-lower-back-image" src="images/lower/0.png">
+                <div class="lower-front" id="seconds-lower-front">
+                    <img id="seconds-lower-front-image" src="images/lower/0.png">
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div id="month">
-		<script type="text/javascript">
-			var month_name = new Array(12);
-			month_name[0] = "January";
-			month_name[1] = "February";
-			month_name[2] = "March";
-			month_name[3] = "April";
-			month_name[4] = "May";
-			month_name[5] = "June";
-			month_name[6] = "July";
-			month_name[7] = "August";
-			month_name[8] = "September";
-			month_name[9] = "October";
-			month_name[10] = "November";
-			month_name[11] = "December";
-			var currentTime = new Date();
-			document.write("of " + month_name[currentTime.getMonth()] + ".");
-		</script>
-	</div>
-	<div id="date">
-		<div id="dateBack">
-			<div id="dateUpperHalfBack">
-				<img src="./images/spacer2.png" /><img id="dateUpBack" src="./images/faces/upper/0.png" />
-			</div>
-			<div id="dateLowerHalfBack">
-				<img src="./images/spacer2.png" /><img id="dateDownBack" src="./images/faces/lower/0.png" />
-			</div>
-		</div>
-
-
-		<div id="dateFront">
-			<div id="dateUpperHalf">
-				<img src="./images/spacer2.png" /><img id="dateUp" src="./images/faces/upper/0.png" />
-			</div>
-			<div id="dateLowerHalf">
-				<img src="./images/spacer2.png" /><img id="dateDown" src="./images/faces/lower/0.png" />
-			</div>
-		</div>
-	</div>
-
-	<div id="header">
-		Current Hockey is:
-	</div>
-	<div id="wrapper">
-
-		<div id="back">
-			<div id="upperHalfBack">
-				<img src="./images/spacer.png" /><img id="hoursUpBack" src="./images/faces/upper/0.png" />
-				<img id="minutesUpBack" src="./images/faces/upper/0.png" />
-				<img id="secondsUpBack" src="./images/faces/upper/0.png" /><img src="./images/spacer.png" />
-			</div>
-			<div id="lowerHalfBack">
-				<img src="./images/spacer.png" /><img id="hoursDownBack" src="./images/faces/lower/0.png" />
-				<img id="minutesDownBack" src="./images/faces/lower/0.png" />
-				<img id="secondsDownBack" src="./images/faces/lower/0.png" /><img src="./images/spacer.png" />
-			</div>
-		</div>
-
-		<div id="front">
-			<div id="upperHalf">
-				<img src="./images/spacer.png" /><img id="hoursUp" src="./images/faces/upper/0.png" />
-				<img id="minutesUp" src="./images/faces/upper/0.png" />
-				<img id="secondsUp" src="./images/faces/upper/0.png" /><img src="./images/spacer.png" />
-			</div>
-			<div id="lowerHalf">
-				<img src="./images/spacer.png" /><img id="hoursDown" src="./images/faces/lower/0.png" />
-				<img id="minutesDown" src="./images/faces/lower/0.png" />
-				<img id="secondsDown" src="./images/faces/lower/0.png" /><img src="./images/spacer.png" />
-			</div>
-		</div>
-	</div>
-
+    <!-- Social share buttons -->
+    <div id="share-buttons">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                data-size="large" data-show-count="false">Tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="fb-share-button" data-href="https://whathockeyisit.com" data-layout="button" data-size="large"><a
+                target="_blank"
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwhathockeyisit.com%2F&amp;src=sdkpreparse"
+                class="fb-xfbml-parse-ignore">Share</a></div>
+    </div>
 </body>
-<script src="./scripts/mootools.js" type="text/javascript"></script>
-<script src="./scripts/hockeyclock.js" type="text/javascript"></script>
+
+<!-- Hockey clock script reference -->
+<script src="script.js" type="text/javascript"></script>
 
 </html>
