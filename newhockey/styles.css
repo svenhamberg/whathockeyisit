@@ -3,7 +3,7 @@
 }
 
 html {
-  background-color: beige;
+  background-color: rgb(185, 185, 185);
 }
 
 header {
@@ -11,16 +11,18 @@ header {
   font-weight: bold;
   font-size: 5rem;
   text-align: center;
-  margin: 50px 0px;
+  margin: 50px 0px 40px 0px;
 }
 
 #clock {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0px 40px 0px 40px;
   display: flex;
   justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3% 4%;
+  background-color: rgb(198, 198, 198);
+  border-radius: 15px;
 }
 
 #seconds,
