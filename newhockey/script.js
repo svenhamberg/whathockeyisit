@@ -1,3 +1,12 @@
+function preloadImages() {
+  for (let i = 0; i < 60; i++) {
+      const upperImg = new Image();
+      upperImg.src = `images/upper/${i}.png`;
+      const lowerImg = new Image();
+      lowerImg.src = `images/lower/${i}.png`;
+  }
+}
+
 function flip(partOfClock, timeUnit) {
   var lower_back = document.getElementById(partOfClock + '-lower-back-image');
   var lower_front = document.getElementById(partOfClock + '-lower-front-image');
@@ -75,8 +84,8 @@ function hockeyClock() {
   if (h != h_current) {
     flip('hours', h);
     h_current = h;
-    console.log('h_current: '+h_current);
   }
 }
 
+preloadImages();
 setInterval('hockeyClock()', 1000);
