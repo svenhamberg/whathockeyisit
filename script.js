@@ -1,9 +1,9 @@
 function preloadImages() {
   for (let i = 0; i < 60; i++) {
-      const upperImg = new Image();
-      upperImg.src = `images/upper/${i}.png`;
-      const lowerImg = new Image();
-      lowerImg.src = `images/lower/${i}.png`;
+    const upperImg = new Image();
+    upperImg.src = `images/upper/${i}.png`;
+    const lowerImg = new Image();
+    lowerImg.src = `images/lower/${i}.png`;
   }
 }
 
@@ -15,48 +15,37 @@ function flip(partOfClock, timeUnit) {
   var player = timeUnit;
   upper_front.src = upper_back.src;
   upper_back.src = 'images/upper/' + player + '.png';
-  animateUpper(partOfClock + '-upper-front');
+  animate(partOfClock + '-upper-front', 100, 'contract');
   setTimeout(function () {
     lower_back.src = lower_front.src;
     lower_front.src = 'images/lower/' + player + '.png';
-    animateLower(partOfClock + '-lower-front')
+    animate(partOfClock + '-lower-front', 0, 'expand');
   }, 150);
 }
 
-function animateUpper(image) {
+function animate(image, startHeight, direction) {
   var imageContainer = document.getElementById(image);
   var duration = 200; // Animation duration in milliseconds
   var interval = 10; // Interval for each step in milliseconds
   var steps = duration / interval;
   var currentStep = 0;
-  var containerHeight = 100;
-  imageContainer.style.height = '100%';
+  var containerHeight = startHeight;
+  imageContainer.style.height = startHeight + '%';
   var intervalId = setInterval(function () {
     if (currentStep >= steps) {
       clearInterval(intervalId);
     } else {
       currentStep++;
-      containerHeight = containerHeight - 100 / steps;
-      imageContainer.style.height = containerHeight + '%';
-    }
-  }, interval);
-}
-
-function animateLower(image) {
-  var imageContainer = document.getElementById(image);
-  var duration = 200; // Animation duration in milliseconds
-  var interval = 10; // Interval for each step in milliseconds
-  var steps = duration / interval;
-  var currentStep = 0;
-  var containerHeight = 0;
-  imageContainer.style.height = '0%';
-  var intervalId = setInterval(function () {
-    if (currentStep >= steps) {
-      clearInterval(intervalId);
-    } else {
-      currentStep++;
-      containerHeight = containerHeight + 100 / steps;
-      imageContainer.style.height = containerHeight + '%';
+      switch (direction) { // Determine whether to contract (for the upper) or expand (for the lower) front image
+        case 'contract':
+          containerHeight = containerHeight - 100 / steps;
+          imageContainer.style.height = containerHeight + '%';
+          break;
+        case 'expand':
+          containerHeight = containerHeight + 100 / steps;
+          imageContainer.style.height = containerHeight + '%';
+          break;
+      }
     }
   }, interval);
 }
