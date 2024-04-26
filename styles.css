@@ -43,6 +43,8 @@ header {
 #hours {
   position: relative;
   display: inline-block;
+  background-color: rgb(185, 185, 185);
+  border-radius: 15px;
   width: 30%;
   padding-top: 30%;
   margin: 0% 1% 0% 1%;
@@ -73,6 +75,7 @@ header {
 
 .upper-front {
   bottom: 0px;
+  /* border-bottom: 2px solid black; */
 }
 
 .lower-back{
@@ -81,6 +84,7 @@ header {
 
 .lower-front {
   top: 0px;
+  /* border-top: 2px solid black; */
 }
 
 .upper-back img,

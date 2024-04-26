@@ -7,74 +7,129 @@ function preloadImages() {
   }
 }
 
-function flip(partOfClock, timeUnit) {
-  var lower_back = document.getElementById(partOfClock + '-lower-back-image');
-  var lower_front = document.getElementById(partOfClock + '-lower-front-image');
-  var upper_back = document.getElementById(partOfClock + '-upper-back-image');
-  var upper_front = document.getElementById(partOfClock + '-upper-front-image');
-  var player = timeUnit;
-  upper_front.src = upper_back.src;
-  upper_back.src = 'images/upper/' + player + '.png';
-  animate(partOfClock + '-upper-front', 100, 'contract');
-  setTimeout(function () {
-    lower_back.src = lower_front.src;
-    lower_front.src = 'images/lower/' + player + '.png';
-    animate(partOfClock + '-lower-front', 0, 'expand');
-  }, 150);
+function flip(partOfClock, timeUnit, duration, step) {
+  return new Promise(resolve => {
+    var lower_back = document.getElementById(partOfClock + '-lower-back-image');
+    var lower_front = document.getElementById(partOfClock + '-lower-front-image');
+    var upper_back = document.getElementById(partOfClock + '-upper-back-image');
+    var upper_front = document.getElementById(partOfClock + '-upper-front-image');
+    var player = timeUnit;
+    var animationDuration = duration;
+    var animationStep = step;
+    upper_front.src = upper_back.src;
+    upper_back.src = 'images/upper/' + player + '.png';
+    animate(partOfClock + '-upper-front', 100, 'contract', animationDuration, animationStep).then(() => {
+      lower_back.src = lower_front.src;
+      lower_front.src = 'images/lower/' + player + '.png';
+      return animate(partOfClock + '-lower-front', 0, 'expand', animationDuration, animationStep);
+    }).then(() => {
+      resolve();
+    });
+  });
 }
 
-function animate(image, startHeight, direction) {
-  var imageContainer = document.getElementById(image);
-  var duration = 200; // Animation duration in milliseconds
-  var interval = 10; // Interval for each step in milliseconds
-  var steps = duration / interval;
-  var currentStep = 0;
-  var containerHeight = startHeight;
-  imageContainer.style.height = startHeight + '%';
-  var intervalId = setInterval(function () {
-    if (currentStep >= steps) {
-      clearInterval(intervalId);
-    } else {
-      currentStep++;
-      switch (direction) { // Determine whether to contract (for the upper) or expand (for the lower) front image
-        case 'contract':
-          containerHeight = containerHeight - 100 / steps;
-          imageContainer.style.height = containerHeight + '%';
-          break;
-        case 'expand':
-          containerHeight = containerHeight + 100 / steps;
-          imageContainer.style.height = containerHeight + '%';
-          break;
+function animate(image, startHeight, direction, animationDuration, animationInterval) {
+  return new Promise(resolve => {
+    var imageContainer = document.getElementById(image);
+    var duration = animationDuration; // Animation duration in milliseconds
+    var interval = animationInterval; // Interval for each step in milliseconds
+    var steps = duration / interval;
+    var currentStep = 0;
+    var containerHeight = startHeight;
+    imageContainer.style.height = startHeight + '%';
+    var intervalId = setInterval(function () {
+      if (currentStep >= steps) {
+        clearInterval(intervalId);
+        resolve();
+      } else {
+        currentStep++;
+        switch (direction) { // Determine whether to contract (for the upper) or expand (for the lower) front image
+          case 'contract':
+            containerHeight = containerHeight - 100 / steps;
+            imageContainer.style.height = containerHeight + '%';
+            break;
+          case 'expand':
+            containerHeight = containerHeight + 100 / steps;
+            imageContainer.style.height = containerHeight + '%';
+            break;
+        }
       }
-    }
-  }, interval);
+    }, interval);
+  });
+}
+
+function getNow() {
+  var now = new Date();
+  var h = now.getHours();
+  var m = now.getMinutes();
+  var s = now.getSeconds();
+  return { now, h, m, s };
 }
 
 var s_current = -1;
 var m_current = -1;
 var h_current = -1;
 
-function hockeyClock() {
-  now = new Date();
-  h = now.getHours();
-  m = now.getMinutes();
-  s = now.getSeconds();
+function setFlipper(current, t, unit, animationDuration, animationStep) {
+  return new Promise(resolve => {
+    var tPromise = Promise.resolve();
+    for (let i = current + 1; i <= t; i++) {
+      tPromise = tPromise.then(() => flip(unit, i, animationDuration, animationStep));
+    }
+    tPromise.then(() => {
+      resolve();
+    });
+  });
+}
+
+function setClock() {
+  return new Promise(resolve => {
+    var now = getNow();
+    var h = now.h;
+    var m = now.m;
+    var s = now.s;
+    var animationDuration = 1;
+    var animationStep = 1;
+
+    setFlipper(h_current, h, 'hours', animationDuration, animationStep).then(() => {
+      h_current = h;
+      return setFlipper(m_current, m, 'minutes', animationDuration, animationStep);
+    }).then(() => {
+      m_current = m;
+      return setFlipper(s_current, s, 'seconds', animationDuration, animationStep);
+    }).then(() => {
+      s_current = s;
+    }).then(() => {
+      resolve();
+    });
+  });
+}
+
+function runClock() {
+  var now = getNow();
+  var h = now.h;
+  var m = now.m;
+  var s = now.s;
+  var animationDuration = 200;
+  var animationStep = 10;
 
   if (s != s_current) {
-    flip('seconds', s);
+    flip('seconds', s, animationDuration, animationStep);
     s_current = s;
   }
 
   if (m != m_current) {
-    flip('minutes', m);
+    flip('minutes', m, animationDuration, animationStep);
     m_current = m;
   }
 
   if (h != h_current) {
-    flip('hours', h);
+    flip('hours', h, animationDuration, animationStep);
     h_current = h;
   }
 }
 
 preloadImages();
-setInterval('hockeyClock()', 1000);
+setClock().then(() => {
+  setInterval(runClock, 1000);
+});
