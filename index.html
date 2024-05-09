@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What Hockey Is It?</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta itemprop="name" content="What Hockey Is It?">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>What Hockey Is It?</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta itemprop="name" content="What Hockey Is It?">
 	<meta itemprop="description" content="Finally! An easy way to tell the current Hockey!">
 	<meta itemprop="image" content="http://whathockeyisit.com/icon.png">
 	<meta property="og:title" content="What Hockey Is It?" />
@@ -14,73 +14,82 @@
 	<meta property="og:url" content="http://whathockeyisit.com/" />
 	<meta property="og:image" content="http://whathockeyisit.com/icon.png" />
 	<meta property="og:description" content="Finally! An easy way to tell the current Hockey!" />
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-84WNT6CMX6"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-84WNT6CMX6');
+	</script>
 </head>
 
 <body>
-    <!-- Facebook SDK -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0"
-        nonce="Ki6I4sgx"></script>
-    
-    <!-- Page content -->
-    <header>
-        Right now,<br>the Hockey is:
-    </header>
-    <div id="clock">
-        <div id="hours">
-            <div class="upper-back">
-                <img class="upper-image" id="hours-upper-back-image" src="">
-                <div class="upper-front" id="hours-upper-front">
-                    <img id="hours-upper-front-image" src="">
-                </div>
-            </div>
-            <div class="lower-back">
-                <img class="lower-image" id="hours-lower-back-image" src="">
-                <div class="lower-front" id="hours-lower-front">
-                    <img id="hours-lower-front-image" src="">
-                </div>
-            </div>
-        </div>
-        <div id="minutes">
-            <div class="upper-back">
-                <img class="upper-image" id="minutes-upper-back-image" src="">
-                <div class="upper-front" id="minutes-upper-front">
-                    <img id="minutes-upper-front-image" src="">
-                </div>
-            </div>
-            <div class="lower-back">
-                <img class="lower-image" id="minutes-lower-back-image" src="">
-                <div class="lower-front" id="minutes-lower-front">
-                    <img id="minutes-lower-front-image" src="">
-                </div>
-            </div>
-        </div>
-        <div id="seconds">
-            <div class="upper-back">
-                <img class="upper-image" id="seconds-upper-back-image" src="">
-                <div class="upper-front" id="seconds-upper-front">
-                    <img id="seconds-upper-front-image" src="">
-                </div>
-            </div>
-            <div class="lower-back">
-                <img class="lower-image" id="seconds-lower-back-image" src="">
-                <div class="lower-front" id="seconds-lower-front">
-                    <img id="seconds-lower-front-image" src="">
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- Facebook SDK -->
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v19.0"
+		nonce="Ki6I4sgx"></script>
 
-    <!-- Social share buttons -->
-    <div id="share-buttons">
-        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
-                data-size="large" data-show-count="false">Tweet</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <div class="fb-share-button" data-href="https://whathockeyisit.com" data-layout="button" data-size="large"><a
-                target="_blank"
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwhathockeyisit.com%2F&amp;src=sdkpreparse"
-                class="fb-xfbml-parse-ignore">Share</a></div>
-    </div>
+	<!-- Page content -->
+	<header>
+		Right now,<br>the Hockey is:
+	</header>
+	<div id="clock">
+		<div id="hours">
+			<div class="upper-back">
+				<img class="upper-image" id="hours-upper-back-image" src="">
+				<div class="upper-front" id="hours-upper-front">
+					<img id="hours-upper-front-image" src="">
+				</div>
+			</div>
+			<div class="lower-back">
+				<img class="lower-image" id="hours-lower-back-image" src="">
+				<div class="lower-front" id="hours-lower-front">
+					<img id="hours-lower-front-image" src="">
+				</div>
+			</div>
+		</div>
+		<div id="minutes">
+			<div class="upper-back">
+				<img class="upper-image" id="minutes-upper-back-image" src="">
+				<div class="upper-front" id="minutes-upper-front">
+					<img id="minutes-upper-front-image" src="">
+				</div>
+			</div>
+			<div class="lower-back">
+				<img class="lower-image" id="minutes-lower-back-image" src="">
+				<div class="lower-front" id="minutes-lower-front">
+					<img id="minutes-lower-front-image" src="">
+				</div>
+			</div>
+		</div>
+		<div id="seconds">
+			<div class="upper-back">
+				<img class="upper-image" id="seconds-upper-back-image" src="">
+				<div class="upper-front" id="seconds-upper-front">
+					<img id="seconds-upper-front-image" src="">
+				</div>
+			</div>
+			<div class="lower-back">
+				<img class="lower-image" id="seconds-lower-back-image" src="">
+				<div class="lower-front" id="seconds-lower-front">
+					<img id="seconds-lower-front-image" src="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Social share buttons -->
+	<div id="share-buttons">
+		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large"
+			data-show-count="false">Tweet</a>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<div class="fb-share-button" data-href="https://whathockeyisit.com" data-layout="button" data-size="large"><a
+				target="_blank"
+				href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwhathockeyisit.com%2F&amp;src=sdkpreparse"
+				class="fb-xfbml-parse-ignore">Share</a></div>
+	</div>
 </body>
 
 <!-- Hockey clock script reference -->
