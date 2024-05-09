@@ -73,6 +73,9 @@ var h_current = -1;
 function setFlipper(current, t, unit, animationDuration, animationStep) {
   return new Promise(resolve => {
     var tPromise = Promise.resolve();
+    for (let i = 0; i <= 60; i++) {
+      tPromise = tPromise.then(() => flip(unit, i, animationDuration, animationStep)); // Run through all numbers once first to ensure a long enough animation
+    }
     for (let i = current + 1; i <= t; i++) {
       tPromise = tPromise.then(() => flip(unit, i, animationDuration, animationStep));
     }
